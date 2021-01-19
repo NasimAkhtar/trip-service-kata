@@ -1,4 +1,4 @@
-package com.nasim.service;
+package org.craftedsw.tripservicekata.trip;
 
 import org.junit.Test;
 

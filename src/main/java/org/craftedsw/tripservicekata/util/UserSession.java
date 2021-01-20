@@ -4,7 +4,7 @@ import org.craftedsw.tripservicekata.model.User;
 
 public class UserSession {
     public static UserSession getInstance() {
-        return null;
+        return new UserSession();
     }
 
     public User getLoggedUser() {

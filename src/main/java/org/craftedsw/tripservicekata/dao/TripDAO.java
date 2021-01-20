@@ -7,6 +7,6 @@ import java.util.List;
 
 public class TripDAO {
     public static List<Trip> findTripsByUser(User user) {
-        return null;
+        return user.getTrips();
     }
 }

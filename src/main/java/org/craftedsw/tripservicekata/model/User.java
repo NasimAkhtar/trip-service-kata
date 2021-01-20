@@ -7,11 +7,8 @@ public class User {
 
     LinkedList<Trip> trips = new LinkedList<>();
     LinkedList<User> friends = new LinkedList<>();
-    private String name;
 
-    public User(String name) {
-        this.name = name;
-    }
+    public User() {}
 
     public List<User> getFriends() {
         return friends;
@@ -23,14 +20,6 @@ public class User {
 
     public void addFriend(User user) {
         friends.add(user);
-    }
-
-    @Override
-    public boolean equals(Object user) {
-        if (user instanceof  User) {
-            return this.name == ((User) user).name;
-        }
-        return false;
     }
 
     public List<Trip> getTrips() {

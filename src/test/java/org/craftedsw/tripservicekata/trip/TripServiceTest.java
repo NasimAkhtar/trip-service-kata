@@ -39,9 +39,11 @@ public class TripServiceTest {
 
     @Test
     public void should_return_no_trips_when_users_are_not_friend() {
-        User friend = new User();
-        friend.addFriend(ANOTHER_USER);
-        friend.addTrip(TO_BRAZIL);
+        User friend = UserBuilder
+                .aUser()
+                .friendsWith(ANOTHER_USER)
+                .withTrips(TO_BRAZIL, TO_EUROPE)
+                .build();
 
         List<Trip> tripsByUser = tripService.getTripsByUser(friend);
 
@@ -50,10 +52,11 @@ public class TripServiceTest {
 
     @Test
     public void should_return_trips_when_users_are_friends() {
-        User friend = new User();
-        friend.addTrip(TO_BRAZIL);
-        friend.addTrip(TO_EUROPE);
-        friend.addFriend(loggedInUser);
+        User friend = UserBuilder
+                .aUser()
+                .friendsWith(ANOTHER_USER, loggedInUser)
+                .withTrips(TO_BRAZIL, TO_EUROPE)
+                .build();
 
         List<Trip> tripsByUser = tripService.getTripsByUser(friend);
 
@@ -61,8 +64,7 @@ public class TripServiceTest {
     }
 
 
-
-    class TestableTripService extends TripService {
+    private class TestableTripService extends TripService {
         @Override
         protected User getLoggedUser() {
             return loggedInUser;

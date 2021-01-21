@@ -3,20 +3,20 @@ package org.craftedsw.tripservicekata.trip;
 import org.craftedsw.tripservicekata.model.Trip;
 import org.craftedsw.tripservicekata.model.User;
 
-class UserBuilder {
-    private User[] friends =  null;
-    private Trip[] trips = null;
+public class UserBuilder {
+    private User[] friends = new User[0];
+    private Trip[] trips = new Trip[0];
 
     public static UserBuilder aUser() {
         return new UserBuilder();
     }
 
-    UserBuilder friendsWith(User... friends) {
+    public UserBuilder friendsWith(User... friends) {
         this.friends = friends;
         return this;
     }
 
-    UserBuilder withTrips(Trip... trips) {
+    public UserBuilder withTrips(Trip... trips) {
         this.trips = trips;
         return this;
     }

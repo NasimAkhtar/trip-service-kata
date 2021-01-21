@@ -25,12 +25,7 @@ public class User {
     }
 
     public boolean isFriend(User user) {
-        for (User friend : this.friends) {
-            if (friend.equals(user)) {
-                return true;
-            }
-        }
-        return false;
+        return friends.contains(user);
     }
 
 }

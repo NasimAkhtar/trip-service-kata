@@ -26,7 +26,7 @@ public class TripServiceTest {
     private TripService tripService;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         tripService = new TestableTripService(new TripDAO());
         loggedInUser = REGISTERED_USER;
     }

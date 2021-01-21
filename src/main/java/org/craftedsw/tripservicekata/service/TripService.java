@@ -29,7 +29,7 @@ public class TripService {
     }
 
     private List<Trip> noTrips() {
-        return new ArrayList<Trip>();
+        return new ArrayList<>();
     }
 
     protected List<Trip> tripsBy(User user) {

@@ -1,0 +1,9 @@
+Topics Covered:
+
+0:45 - 1:17
+Dead Code
+Guard Clause
+Inline variables
+Symmetrical If clause : replace with ternary operator
+Your model(service) should not know anything about your web framework(Session etc)
+

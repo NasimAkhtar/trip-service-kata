@@ -17,21 +17,25 @@ public class TripService {
         this.tripDAO = tripDAO;
     }
 
-    public List<Trip> getTripsByUser(User user, User loggedInUser) throws UserNotLoggedInException {
+    public List<Trip> getFriendTrips(User user, User loggedInUser) {
 
-        if (loggedInUser == null)
-            throw new UserNotLoggedInException();
+        validate(loggedInUser);
 
         return user.isFriend(loggedInUser)
                     ? tripsBy(user)
                     : noTrips();
     }
 
+    private void validate(User loggedInUser) {
+        if (loggedInUser == null)
+            throw new UserNotLoggedInException();
+    }
+
     private List<Trip> noTrips() {
         return new ArrayList<>();
     }
 
-    protected List<Trip> tripsBy(User user) {
+    private List<Trip> tripsBy(User user) {
         return tripDAO.tripsByUser(user);
     }
 }

@@ -4,8 +4,6 @@ import org.craftedsw.tripservicekata.exception.CollaboratorCallException;
 import org.craftedsw.tripservicekata.model.User;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class TripDAOTest {
 
     @Test(expected = CollaboratorCallException.class)

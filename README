@@ -1,3 +1,16 @@
+Working with legacy code tips:
+1. start testing from shortest to deepest branch
+2. start refactoring from deepest to shortest branch
+
+Craftsmen at work:
+1. write readable and maintainable code - code must express business rules
+2. strive for simplicity
+3. know your tools well - frameworks, shortcuts
+4. work in small and safe increment - commit often
+5. embrace change, be brave
+6. boy scout rule/ no broken window
+
+
 Topics Covered:
 
 0:45 - 1:17

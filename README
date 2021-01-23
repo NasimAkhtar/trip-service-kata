@@ -6,4 +6,4 @@ Guard Clause
 Inline variables
 Symmetrical If clause : replace with ternary operator
 Your model(service) should not know anything about your web framework(Session etc)
-
+Replace static calls by DI
